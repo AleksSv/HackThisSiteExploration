@@ -3,6 +3,8 @@ HackThisSiteExploration
 
 Exploration of the challenges on https://www.hackthissite.org
 
+XSS challenges documented on XSS.md
+
 This website has a multitude of hacking challenges, the purpose of this exploration is to go through some of them and document my solutions. I primarily used Chrome Dev Tools for inspection.
 
 (I also learned the difference between ' and ` for github markdown)
