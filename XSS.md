@@ -138,3 +138,7 @@ So the real solution is
 ```
     https://xss-game.appspot.com/level6/frame#hTtps://babbage.cs.missouri.edu/~ascp6/xss/alert.js
 ```
+After even more reading, // is a equivalent to http, so this is also valid
+```
+    https://xss-game.appspot.com/level6/frame#//babbage.cs.missouri.edu/~ascp6/xss/alert.js
+```
