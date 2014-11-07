@@ -153,10 +153,10 @@ alert("Nope, try again");
 JS Obfuscation. FTW!
 ------------------
 
-This was the first challenge rated as moderate, they weren't kidding about obfuscation. However, the solution was still obvious, j00w1n is the correct answer. I spent a while analyzing the Javascript, but it is simplyh writing the button HTML through the use of hexadecimals. 
+This was the first challenge rated as moderate, they weren't kidding about obfuscation. However, the solution was still obvious, j00w1n is the correct answer. I spent a while analyzing the Javascript, but it is simply writing the button HTML through the use of hexadecimals. And you can get the answer simply by looking at the HTML.
 
 ```html
-<button onclick="javascript:if (document.getElementById(&quot;pass&quot;).value==&quot;j00w1n&quot;){alert(&quot;You WIN!&quot;);window.location += &quot;?lvl_password=&quot;+document.getElementById(&quot;pass&quot;).value}else {alert(&quot;WRONG! Try again!&quot;)}">Check Password</button>
+<button onclick="javascript:if (document.getElementById("pass").value=="j00w1n"){alert("You WIN!");window.location += "?lvl_password="+document.getElementById("pass").value}else {alert("WRONG! Try again!")}">Check Password</button>
 ```
 
 ```javascript
