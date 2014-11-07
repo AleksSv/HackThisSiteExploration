@@ -111,4 +111,14 @@ Which turned the link to
 
 Level 6: Follow the
 ------------------------
-Currently in progress
+
+This one stumped me for quite a bit, I wanted to somehow get my javascript from babbage linked in, however the javascript checks for "http", so I couldn't figure out a solution.
+
+I looked online and the solution was 
+```
+    https://xss-game.appspot.com/level6/frame#data:text/javascript,alert('XSS')
+```
+I found this solution lame as it didn't actually load external javascript persay. One thing I wanted to try is loading the javascript file through FTP which babbage does not seem to have.
+
+All in all, I learned quite a bit in Cross Side Scripting attacks.
+
